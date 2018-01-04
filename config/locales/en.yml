@@ -17,7 +17,7 @@ en:
       logout: "Log out"
       login: "Log in"
       m_footer: "The <a href=%{url1} >Ruby on Rails Tutorial</a>
-    by <a href=%{url2}>Michael Hartl</a>"
+        by <a href=%{url2}>Michael Hartl</a>"
     shared:
       error_message: "The form contains"
       error: "error"

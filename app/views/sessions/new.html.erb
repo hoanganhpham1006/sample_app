@@ -1,0 +1,18 @@
+<% provide :title, t("views.sessions.login") %>
+<%= content_tag :h1, t("views.sessions.login") %>
+<div class = "row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for :session, url: login_path do |f| %>
+      <%= f.label :email, t("views.sessions.email") %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password, t("views.sessions.password") %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.submit t("views.sessions.login"), class: "btn btn-primary" %>
+    <% end %>
+    <p> <%= t("views.sessions.new?") %>
+      <%= link_to t("views.sessions.signup!"), signup_path %>
+    </p>
+  </div>
+</div>

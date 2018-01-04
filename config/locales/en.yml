@@ -3,7 +3,21 @@ en:
     users:
       m_success: "Welcome to the Sample App"
       m_nil: "The users' s id does not exist"
+    sessions:
+      invalid: "Invalid email or password!"
   views:
+    layouts:
+      app_name: "Sample app"
+      home: "Home"
+      help: "Help"
+      user: "Users"
+      account: "Account"
+      profile: "Profile"
+      setting: "Settings"
+      logout: "Log out"
+      login: "Log in"
+      m_footer: "The <a href=%{url1} >Ruby on Rails Tutorial</a>
+    by <a href=%{url2}>Michael Hartl</a>"
     shared:
       error_message: "The form contains"
       error: "error"
@@ -13,3 +27,11 @@ en:
       email_label: "Email"
       password_label: "Password"
       password_confirmation_label: "Confirmation"
+    sessions:
+      email: "Email"
+      password: "Password"
+      login: "Log In"
+      new?: "New user?"
+      signup!: "Sign Up Now"
+  helpers:
+    base_title: "Ruby on Rails Tutorial Sample App"

@@ -1,0 +1,7 @@
+picture:
+  size: 80
+maximum_length:
+  name: 50
+  email: 255
+minimum_length:
+  password: 6

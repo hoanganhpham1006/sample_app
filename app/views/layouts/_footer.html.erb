@@ -1,8 +1,8 @@
 <footer class="footer">
   <small>
-    The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
-    <%= raw t("views.layouts.m_footer", url1: "http://www.railstutorial.org/" , url2: "http://www.michaelhartl.com/") %>
+    <%= t("views.layouts.m_footer",
+      url1: "http://www.railstutorial.org/",
+      url2: "http://www.michaelhartl.com/").html_safe %>
   </small>
   <nav>
     <ul>

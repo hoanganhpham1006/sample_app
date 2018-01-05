@@ -1,12 +1,17 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
   before_save {self.email = email.downcase}
-  validates :name,  presence: true, length: {maximum: Settings.maximum_length.name}
+  validates :name, presence: true,
+    length: {maximum: Settings.maximum_length.name}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence: true, length: {maximum: Settings.maximum_length.email},
-    format: { with: VALID_EMAIL_REGEX }, uniqueness: {case_sensitive: false}
+  validates :email, presence: true,
+    length: {maximum: Settings.maximum_length.email},
+    format: {with: VALID_EMAIL_REGEX},
+    uniqueness: {case_sensitive: false}
   has_secure_password
-  validates :password, presence: true, length: {minimum: Settings.minimum_length.password}
+  validates :password, presence: true,
+    length: {minimum: Settings.minimum_length.password},
+    allow_nil: true
 
   class << self
     def digest string
@@ -31,5 +36,9 @@ class User < ApplicationRecord
 
   def forget
     update_attributes remember_digest: User.digest(remember_token)
+  end
+
+  def current_user? user
+    self == user
   end
 end

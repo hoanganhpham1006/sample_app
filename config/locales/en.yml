@@ -33,5 +33,6 @@ en:
       login: "Log In"
       new?: "New user?"
       signup!: "Sign Up Now"
+      remember_me_message: "Remember me on this computer!"
   helpers:
     base_title: "Ruby on Rails Tutorial Sample App"

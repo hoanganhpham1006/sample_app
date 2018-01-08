@@ -1,10 +1,12 @@
 en:
   controllers:
-    users:
-      m_success: "Welcome to the Sample App"
-      m_nil: "The users' s id does not exist"
-    sessions:
-      invalid: "Invalid email or password!"
+    m_success: "Welcome to the Sample App"
+    m_nil: "The users' s id does not exist"
+    invalid_noti: "Invalid email or password!"
+    update_success_mes: "Update success!"
+    require_login_mes: "Please login"
+    deleted_noti: "User successfully deleted!"
+    deleted_failed_noti: "User is not be deleted! Fail!"
   views:
     layouts:
       app_name: "Sample app"
@@ -18,15 +20,24 @@ en:
       login: "Log in"
       m_footer: "The <a href=%{url1} >Ruby on Rails Tutorial</a>
         by <a href=%{url2}>Michael Hartl</a>"
+      name_label: "Name"
+      email_label: "Email"
+      password_label: "Password"
+      password_confirmation_label: "Confirmation"
     shared:
       error_message: "The form contains"
       error: "error"
     users:
       signup: "Sign Up"
-      name_label: "Name"
-      email_label: "Email"
-      password_label: "Password"
-      password_confirmation_label: "Confirmation"
+      edit_title: "Edit"
+      button_save: "Save change"
+      update_title: "Update your information"
+      change_ava_mes: "Change your avatar"
+      button_create: "Create"
+      all_users_title: "All users"
+      index_title: "All users"
+      del_button: "Delete"
+      del_confirm: "Are you sure?"
     sessions:
       email: "Email"
       password: "Password"
@@ -34,5 +45,12 @@ en:
       new?: "New user?"
       signup!: "Sign Up Now"
       remember_me_message: "Remember me on this computer!"
+    kaminari:
+      pagination:
+        first: "First"
+        last: "Last"
+        next: "Next"
+        previous: "Prev"
   helpers:
     base_title: "Ruby on Rails Tutorial Sample App"
+

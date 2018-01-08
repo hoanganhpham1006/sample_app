@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.select(:id, :name, :email)
+      .where(activated: true)
       .order(:id)
       .paginate page: params[:page],
     per_page: Settings.paginate.num_per_page
@@ -19,16 +20,19 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t "controllers.m_success"
-      redirect_to @user
+      @user.send_activation_email
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = t "controllers.mes_check_mail_requires"
+      redirect_to root_url
     else
       render :new
     end
 
   end
 
-  def show; end
+  def show
+    redirect_to root_url and return unless @user.activated == true
+  end
 
   def edit; end
 

@@ -2,11 +2,15 @@ en:
   controllers:
     m_success: "Welcome to the Sample App"
     m_nil: "The users' s id does not exist"
+    mes_check_mail_requires: "Please check your email to activate your account."
     invalid_noti: "Invalid email or password!"
     update_success_mes: "Update success!"
     require_login_mes: "Please login"
     deleted_noti: "User successfully deleted!"
     deleted_failed_noti: "User is not be deleted! Fail!"
+    m_success_active: "Activate successfully"
+    m_invalid_active: "Invalid activation"
+    m_unactived_noti: "Account not activated. Check your email for the activation link."
   views:
     layouts:
       app_name: "Sample app"
@@ -51,6 +55,13 @@ en:
         last: "Last"
         next: "Next"
         previous: "Prev"
+    user_mailer:
+      activation_link: "Activate"
+      sample_app_title: "Sample App"
+      hi: "Hi %{user_name},"
+      activate_messenger: "Welcome to the Sample App! Click on the link below to activate your account:"
   helpers:
     base_title: "Ruby on Rails Tutorial Sample App"
+  mailer:
+    mail_subject: "Account activation"
 

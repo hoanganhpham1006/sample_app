@@ -1,0 +1,5 @@
+<%= t "views.user_mailer.hi"%>
+
+<%= t "views.user_mailer.activate_message"%>
+
+<%= edit_account_activation_url @user.activation_token, email: @user.email%>

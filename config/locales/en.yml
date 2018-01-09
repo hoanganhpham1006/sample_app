@@ -11,6 +11,11 @@ en:
     m_success_active: "Activate successfully"
     m_invalid_active: "Invalid activation"
     m_unactived_noti: "Account not activated. Check your email for the activation link."
+    m_mail_sent: "Email sent with password reset instructions"
+    m_mail_not_found: "Email address not found"
+    m_cant_empty: "Can not empty"
+    m_reset_password_success: "Reset password success"
+    m_password_expired: "Password Expired!"
   views:
     layouts:
       app_name: "Sample app"
@@ -49,6 +54,7 @@ en:
       new?: "New user?"
       signup!: "Sign Up Now"
       remember_me_message: "Remember me on this computer!"
+      forgot_password: "[Forgot your password?]"
     kaminari:
       pagination:
         first: "First"
@@ -60,8 +66,23 @@ en:
       sample_app_title: "Sample App"
       hi: "Hi %{user_name},"
       activate_messenger: "Welcome to the Sample App! Click on the link below to activate your account:"
+      password_reset_title: "Reset password"
+      password_reset_message: "To reset your password click the link below <br>
+        <a href=%{url} >Reset password</a> <br>
+        This link will expire in two hours. <br>
+        If you didnt request your password to be reset, please ignore this email
+        and your password will stay as it is."
+    password_resets:
+      forgot_password: "Forgot Password"
+      email: "Email"
+      submit: "Submit"
+      reset_password: "Reset Password"
+      password: "Password"
+      password_confirmation: "Confirmation"
+      update_password: "Update password"
   helpers:
     base_title: "Ruby on Rails Tutorial Sample App"
   mailer:
-    mail_subject: "Account activation"
+    activate_mail_subject: "Account activation"
+    reset_pass_mail_subject: "Reset password"
 

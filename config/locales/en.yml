@@ -16,7 +16,19 @@ en:
     m_cant_empty: "Can not empty"
     m_reset_password_success: "Reset password success"
     m_password_expired: "Password Expired!"
+    micropost_success: "Micropost successfully created!"
+    m_login_require: "Please login"
+    micropost_deleted: "Micropost deleted!"
+    micropost_didnt_delete: "Delete failed"
   views:
+    static_pages:
+      micropost: "Micropost Feed"
+      welcome_message: "Welcome to the sample app"
+      introduce: "This is the home page for the
+      <a href=%{url}>Ruby on Rails Tutorial</a>
+      sample application."
+      signup: "Sign up now!"
+      img_alt: "Rails logo"
     layouts:
       app_name: "Sample app"
       home: "Home"
@@ -36,6 +48,10 @@ en:
     shared:
       error_message: "The form contains"
       error: "error"
+      profile_link: "View my profile"
+      micropost: "micropost"
+      hint_new_compose: "Compose new micropost..."
+      post: "Post"
     users:
       signup: "Sign Up"
       edit_title: "Edit"
@@ -47,6 +63,7 @@ en:
       index_title: "All users"
       del_button: "Delete"
       del_confirm: "Are you sure?"
+      number_microposts: "Microposts (%{number_microposts})"
     sessions:
       email: "Email"
       password: "Password"
@@ -80,9 +97,17 @@ en:
       password: "Password"
       password_confirmation: "Confirmation"
       update_password: "Update password"
+    microposts:
+      time_ago: "Posted %{time} ago"
+      delete: "[Delete]"
+      delete_confirmation: "Are you sure?"
   helpers:
     base_title: "Ruby on Rails Tutorial Sample App"
   mailer:
     activate_mail_subject: "Account activation"
     reset_pass_mail_subject: "Reset password"
-
+  models:
+    over_size_noti: "your attach is too large"
+  assets:
+    javascripts:
+      oversize_noti: "Maximum file size is 5MB. Please choose a smaller file."

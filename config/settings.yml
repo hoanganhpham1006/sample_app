@@ -7,3 +7,7 @@ minimum_length:
   password: 6
 paginate:
   num_per_page: 10
+content:
+  max_length: 140
+attach:
+  max_size: 5

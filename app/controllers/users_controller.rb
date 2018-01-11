@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       .where(activated: true)
       .order(:id)
       .paginate page: params[:page],
-    per_page: Settings.paginate.num_per_page
+      per_page: Settings.paginate.num_per_page
   end
 
   def new
@@ -32,6 +32,8 @@ class UsersController < ApplicationController
 
   def show
     redirect_to root_url and return unless @user.activated == true
+    @microposts = @user.microposts.paginate page: params[:page],
+      per_page: Settings.paginate.num_per_page
   end
 
   def edit; end
@@ -55,7 +57,6 @@ class UsersController < ApplicationController
   end
 
   private
-
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation

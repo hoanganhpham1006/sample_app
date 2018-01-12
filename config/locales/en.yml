@@ -20,6 +20,8 @@ en:
     m_login_require: "Please login"
     micropost_deleted: "Micropost deleted!"
     micropost_didnt_delete: "Delete failed"
+    follower_title: "Follower"
+    following_title: "Following"
   views:
     static_pages:
       micropost: "Micropost Feed"
@@ -52,6 +54,8 @@ en:
       micropost: "micropost"
       hint_new_compose: "Compose new micropost..."
       post: "Post"
+      following: "Following"
+      followed: "Followed"
     users:
       signup: "Sign Up"
       edit_title: "Edit"
@@ -64,6 +68,10 @@ en:
       del_button: "Delete"
       del_confirm: "Are you sure?"
       number_microposts: "Microposts (%{number_microposts})"
+      follow: "Follow"
+      unfollow: "Unfollow"
+      view_my_profile: "View my profile"
+      microposts: "Micropost"
     sessions:
       email: "Email"
       password: "Password"
